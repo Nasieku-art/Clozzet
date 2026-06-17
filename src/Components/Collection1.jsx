@@ -2,7 +2,7 @@
 function Collection1({ bg, image, label }) {
   return (
     <div
-      className={`relative ${bg} rounded-lg overflow-hidden h-64 fle items-end h-64`}
+      className={`relative ${bg} rounded-lg overflow-hidden fle items-end h-64`}
     >
       <div className="absolute bottom-6 left-6 z-10 self-end">
         <p className="text-xs font-semibold">Collection</p>

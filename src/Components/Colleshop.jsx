@@ -22,7 +22,7 @@ import stripsweater from "../assets/shop-images/knitted-sweater.png";
 
 function Colleshop() {
   return (
-    <div className="mt-4 mb-30 ">
+    <div className="mt-4 mb-30">
       {/* <h2 className="text-center mt-6 p-3 font-bold">Featured Collection</h2> */}
       <div className="flex gap-4 justify-center py-4">
         <Collectionshop

@@ -3,7 +3,7 @@ function Collection({ image, title, price,cart,setCart}) {
   
   const button = e.target;
   function handleAddToCart(e, product) {
-    console.log(product);
+  
     if (e.target.textContent.toLowerCase() === "add to cart") {
       setCart((prev) => [...prev, product]);
       e.target.textContent = "added to cart".toLocaleUpperCase();
@@ -20,7 +20,7 @@ function Collection({ image, title, price,cart,setCart}) {
           ADD TO CART
         </button>
       </div>
-      {console.log(cart)}
+     
       <div className="flex">
         <p>{title}</p> <span className="bg-transparent opacity-40">🩶</span>
       </div>
