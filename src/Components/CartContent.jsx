@@ -1,53 +1,52 @@
 import CartItem from "./CartItem";
 import Summary from "./Summary";
 import { Link } from "react-router";
-
 import { StateContext } from "../Context/state";
 import { useContext } from "react";
 
 function CartContent() {
-  const{cart,setCart}=useContext(StateContext)
+  const { cart, setCart } = useContext(StateContext);
+
   return (
     <div className="container mx-auto mt-8">
-      <div className="flex gap-4 items-start">
-        <div className="border rounded-md flex-1">
-          {cart.length === 0 ? (
-            <div>
-              <p className="text-center">Your Cart is empty!</p>
-              <div className="justify-items-center mt-6">
-                <button className="flex bg-teal-300 rounded-md px-2 font-bold text-2xl">
-                  {" "}
-                  <Link to="/shop">Shop Now</Link>
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="border rounded-md flex-1">
-              <ul className="flex justify-between px-10 font-bold text-lg  border-gray-300 bg-gray-100">
-                <li>Product</li>
-                <li>Quantity</li>
-                <li>Price</li>
-              </ul>
-              <div>
-                {cart &&
-                  cart.map((product, index) => (
-                    <div>
-                      <CartItem
-                        key={index}
-                        image={product.image}
-                        title={product.title}
-                        price={product.price}
-                      
-                      />
-                    </div>
-                  ))}
-              </div>
+      {cart.length === 0 ? (
 
-              <Summary/>
-            </div>
-          )}
+       
+        <div>
+          <p className="text-center">Your Cart is empty!</p>
+          <div className="justify-items-center mt-6">
+            <button className="flex bg-teal-300 rounded-md px-2 font-bold text-2xl">
+              <Link to="/shop">Shop Now</Link>
+            </button>
+          </div>
         </div>
-      </div>
+
+      ) : (
+
+        <div className="flex gap-4 items-start">
+
+        
+          <div className="border rounded-md flex-1">
+            <ul className="flex justify-between px-10 font-bold text-lg border-gray-300 bg-gray-100">
+              <li>Product</li>
+              <li>Quantity</li>
+              <li>Price</li>
+            </ul>
+            {cart.map((product, index) => (
+              <CartItem
+                key={index}
+                image={product.image}
+                title={product.title}
+                price={product.price}
+              />
+            ))}
+          </div>
+
+    
+          <Summary />
+
+        </div>
+      )}
     </div>
   );
 }
