@@ -1,3 +1,4 @@
+
 import Hero from "../Components/Hero";
 import Categories from "../Components/Categories";
 import Category from "../Components/Category";
@@ -5,7 +6,7 @@ import Featured from "../Components/Featured";
 import Collection1 from "../Components/Collection1";
 import CollectionContent from "../Components/CollectionContent";
 
-function Home({cart, setCart}) {
+function Home() {
   return (
     <div>
       <header>
@@ -13,7 +14,7 @@ function Home({cart, setCart}) {
       </header>
       <main>
         <Categories />
-        <Featured cart={cart} setCart={setCart}/>
+        <Featured/>
         <CollectionContent />
       </main>
       <footer></footer>

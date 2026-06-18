@@ -1,9 +1,12 @@
+  import { StateContext } from "../Context/state";
+import { useContext } from "react";
+function Collection({ image, title, price }) {
 
-function Collection({ image, title, price,cart,setCart}) {
-  
+const {cart, setCart } = useContext(StateContext);
+
+
   const button = e.target;
   function handleAddToCart(e, product) {
-  
     if (e.target.textContent.toLowerCase() === "add to cart") {
       setCart((prev) => [...prev, product]);
       e.target.textContent = "added to cart".toLocaleUpperCase();
@@ -20,11 +23,11 @@ function Collection({ image, title, price,cart,setCart}) {
           ADD TO CART
         </button>
       </div>
-     
+
       <div className="flex">
         <p>{title}</p> <span className="bg-transparent opacity-40">🩶</span>
       </div>
-      <p>{price}</p>
+      <p>{`Ksh. ${price.toLocaleString()}`}</p>
     </div>
   );
 }

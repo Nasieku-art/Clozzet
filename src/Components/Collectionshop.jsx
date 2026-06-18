@@ -13,7 +13,7 @@ function Collectionshop({ image, title, price}) {
         <div className="flex">
           <p>{title}</p> <span className="bg-transparent opacity-40">🩶</span>
         </div>
-        <p>{price}</p>
+        <p>{`Ksh. ${price}`}</p>
       </div>
     </div>
   );

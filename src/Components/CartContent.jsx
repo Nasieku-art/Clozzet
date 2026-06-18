@@ -1,37 +1,55 @@
 import CartItem from "./CartItem";
 import Summary from "./Summary";
+import { Link } from "react-router";
 
-function CartContent({ cart=[]}) {
-  let content;
+import { StateContext } from "../Context/state";
+import { useContext } from "react";
 
-  if (cart.length === 0) {
-    content = <p className="text-center text-gray-400 py-10">Cart is empty</p>;
-  } else {
-    content = cart.map((product, index) => (
-      <CartItem
-        key={index}
-        image={product.image}
-        title={product.title}
-        price={product.price}
-      />
-    ));
-  }
-
-  return (                                        
+function CartContent() {
+  const{cart,setCart}=useContext(StateContext)
+  return (
     <div className="container mx-auto mt-8">
-      <div className="flex gap-2">
-        <div className="border border-gray-300 bg-gray-100 rounded-md flex-1">
-          <ul className="flex justify-between px-10 py-4 font-bold text-lg">
-            <li>Product</li>
-            <li>Quantity</li>
-            <li>Price</li>
-          </ul>
-          {content}                              
+      <div className="flex gap-4 items-start">
+        <div className="border rounded-md flex-1">
+          {cart.length === 0 ? (
+            <div>
+              <p className="text-center">Your Cart is empty!</p>
+              <div className="justify-items-center mt-6">
+                <button className="flex bg-teal-300 rounded-md px-2 font-bold text-2xl">
+                  {" "}
+                  <Link to="/shop">Shop Now</Link>
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="border rounded-md flex-1">
+              <ul className="flex justify-between px-10 font-bold text-lg  border-gray-300 bg-gray-100">
+                <li>Product</li>
+                <li>Quantity</li>
+                <li>Price</li>
+              </ul>
+              <div>
+                {cart &&
+                  cart.map((product, index) => (
+                    <div>
+                      <CartItem
+                        key={index}
+                        image={product.image}
+                        title={product.title}
+                        price={product.price}
+                      
+                      />
+                    </div>
+                  ))}
+              </div>
+
+              <Summary/>
+            </div>
+          )}
         </div>
-        <Summary />
       </div>
     </div>
   );
-}                                                
+}
 
 export default CartContent;

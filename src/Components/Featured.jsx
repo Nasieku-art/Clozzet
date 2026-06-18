@@ -5,7 +5,7 @@ import PleatedPallazotrousers from "../assets/images/Pallazo.png";
 import M22DenimJacket from "../assets/images/denim.png";
 import Collection1 from "./Collection1";
 
-function Featured({ cart, setCart }) {
+function Featured() {
   return (
     <div>
       <h2 className="text-center mt-6 p-3 font-bold">Featured Collection</h2>
@@ -14,30 +14,26 @@ function Featured({ cart, setCart }) {
         <Collection
           image={leatherJacket}
           title=" Brown Leather Jacket"
-          price="Ksh 2,250"
-          cart={cart}
-          setCart={setCart}
+          price= {2250}
+
         />
         <Collection
           image={Roundnecksweatshirts}
           title="Round-neck Sweatshirts"
-          price="Ksh 2,000"
-          cart={cart}
-          setCart={setCart}
+          price={2000}
+
         />
         <Collection
           image={PleatedPallazotrousers}
           title="Pleated Pallazo Trousers"
-          price="Ksh 1,800"
-          cart={cart}
-          setCart={setCart}
+          price= {1800}
+
         />
         <Collection
           image={M22DenimJacket}
           title="Leather Jacket"
-          price="Ksh,1250"
-          cart={cart}
-          setCart={setCart}
+          price={1250}
+
         />
       </div>
     </div>
