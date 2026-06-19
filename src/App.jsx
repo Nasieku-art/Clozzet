@@ -1,13 +1,12 @@
-import StateProvider from "./Context/state"
-import Router from "./Components/Router"
+import StateProvider from "./Context/State";
+import Router from "./Components/Router";
 
 function App() {
-
   return (
     <StateProvider>
-    <Router/>
-   </StateProvider>
-  )
+      <Router />
+    </StateProvider>
+  );
 }
 
-export default App
+export default App;

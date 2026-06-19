@@ -4,7 +4,7 @@ import herobackground from "../assets/images/hero-background.png";
 import { Link } from "react-router";
 
 import { useContext } from "react";
-import { StateContext } from "../Context/state";
+import { StateContext } from "../Context/State";
 
 function Nav({ cartCount }) {
   const { cart } = useContext(StateContext);

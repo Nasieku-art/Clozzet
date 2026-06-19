@@ -3,10 +3,26 @@ import NotFound from "../Pages/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Layout from "../Pages/Layout";
 import Shop from "../Pages/Shop";
-import { useState } from "react";
+import { useContext, useEffect } from "react";
 import Cart from "../Pages/Cart";
 
+import { StateContext } from "../Context/State";
+import CartItem from "./CartItem";
+
 function Router() {
+  const { cart, setCart } = useContext(StateContext);
+
+  useEffect(() => {
+    const CartItems = JSON.parse(localStorage.getItem("cart"));
+    if (CartItems) {
+      setCart(CartItems);
+    }
+  }, []);
+
+    useEffect(() => {
+    if (cart.length !== 0) localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -16,7 +32,6 @@ function Router() {
             element={
               <Layout>
                 <Home />
-               
               </Layout>
             }
           />

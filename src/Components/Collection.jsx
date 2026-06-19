@@ -1,9 +1,7 @@
-  import { StateContext } from "../Context/state";
+import { StateContext } from "../Context/State";
 import { useContext } from "react";
 function Collection({ image, title, price }) {
-
-const {cart, setCart } = useContext(StateContext);
-
+  const { cart, setCart } = useContext(StateContext);
 
   const button = e.target;
   function handleAddToCart(e, product) {

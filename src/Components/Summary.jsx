@@ -1,8 +1,8 @@
-import { StateContext } from "../Context/state";
+import { StateContext } from "../Context/State";
 import { useContext } from "react";
 
 function Summary() {
-const {cartCopy}=useContext(StateContext)
+  const { cartCopy } = useContext(StateContext);
 
   const deliveryFee = 450;
   const subtotal = cartCopy.reduce((acc, curr) => acc + curr.price, 0);
@@ -24,7 +24,7 @@ const {cartCopy}=useContext(StateContext)
 
         <div className="flex justify-between mt-3">
           <p>Subtotal</p>
-          <p>{`KSh ${subtotal.toLocaleString()}`}</p>  
+          <p>{`KSh ${subtotal.toLocaleString()}`}</p>
         </div>
 
         <div className="flex justify-between">
@@ -34,7 +34,7 @@ const {cartCopy}=useContext(StateContext)
 
         <div className="border-t-2 font-bold mt-2 flex justify-between">
           <p>Total</p>
-          <p>{`KSh ${total.toLocaleString()}`}</p> 
+          <p>{`KSh ${total.toLocaleString()}`}</p>
         </div>
 
         <button className="bg-teal-300 w-full py-2 rounded-md font-bold mt-3">
