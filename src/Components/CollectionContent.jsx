@@ -7,7 +7,7 @@ import ladies from "../assets/images/ladies.png";
 function CollectionContent() {
   return (
     <section className="max-w-5xl mx-auto mt-6 px-6">
-      <div className="grid grid-cols-2 gap-4 py-20">
+      <div className="grid grid-cols-2 gap-4 py-20 ">
         <Collection1 bg="bg-gray-300" image={Mens} label="Men's Collections" />
         <Collection1
           bg="bg-cyan-100 "
