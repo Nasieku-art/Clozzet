@@ -34,7 +34,7 @@ function Nav({ cartCount }) {
                 {cart && cart.length}
               </span>
             </div>
-            <button className="hidden lg:flex">Sign Up</button>
+           <Link to="/SignuPage"> <button className="hidden lg:flex">Sign Up</button></Link>
             <button className="hidden lg:flex border-2 rounded-xl  px-6">
               Log In
             </button>

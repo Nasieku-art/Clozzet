@@ -8,6 +8,7 @@ import Cart from "../Pages/Cart";
 
 import { StateContext } from "../Context/State";
 import CartItem from "./CartItem";
+import SignuPage from "../Pages/SignuPage";
 
 function Router() {
   const { cart, setCart } = useContext(StateContext);
@@ -19,7 +20,7 @@ function Router() {
     }
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     if (cart.length !== 0) localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
@@ -57,6 +58,14 @@ function Router() {
           element={
             <Layout>
               <Cart />
+            </Layout>
+          }
+        />
+        <Route
+          path="signupage"
+          element={
+            <Layout>
+              <SignuPage />
             </Layout>
           }
         />
