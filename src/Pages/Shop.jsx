@@ -10,10 +10,7 @@ function Shop() {
     <main>
       <Colleshop/>
     </main>
-    <section>
-      <SignuPage/>
-      <Login/>
-    </section>
+    
     </div>
     
   );

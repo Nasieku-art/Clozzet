@@ -18,7 +18,7 @@ function Loginpage() {
           </div>
           <div>
                       <button className="bg-teal-400 text-white font-bold rounded-xl py-3 mt-2 w-full text-lg text-center">
-                        Create Account
+                       Login to your Account
                       </button>
             
                     <div className="flex items-center gap-3 mt-2">
@@ -28,12 +28,14 @@ function Loginpage() {
                     </div>
           
                    
-                    <div className="mt-2">
-                      <button className="border-gray-300 border rounded-xl px-6 py-2 flex items-center justify-center gap-2 w-full">
-                        <img src={google} alt="google logo" className="w-6 h-6" />
-                        <span className="text-blue-400 font-bold">Sign Up With Google</span>
-                      </button>
-                    </div>
+                   <div className="mt-2">
+                                 <button className="border-gray-300 border rounded-xl px-6 py-2 flex items-center justify-center gap-2 w-full">
+                                   <img src={google} alt="google logo" className="w-6 h-6" />
+                                   <span className="text-blue-400 font-bold">
+                                     Sign Up With Google
+                                   </span>
+                                 </button>
+                               </div>
           
                     <div className="mt-2 mb-2 text-center">
                       <p>Do you Have An Account?
