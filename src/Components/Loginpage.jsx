@@ -6,6 +6,12 @@ function Loginpage() {
   return (
     <div className="container mx-auto py-6">
       <div className="flex gap-10 items-center min-h-[90vh]">
+        <div className="text-center">
+            <h1 className="text-black font-bold text-4xl ">
+             Login to your Account
+            </h1>
+          </div>
+
         <div>
           <img src={login} alt="" />
         </div>
