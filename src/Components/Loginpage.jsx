@@ -1,5 +1,6 @@
 import login from "../assets/images/login.png";
 import google from "../assets/images/google-color-icon.png";
+import { Link } from "lucide-react";
 
 function Loginpage() {
   return (
@@ -52,7 +53,7 @@ function Loginpage() {
           <div className="mt-2 mb-2 text-center">
             <p>
               Do you Have An Account?
-              <span className="text-teal-500 font-semibold cursor-pointer"> Log in</span>
+              <Link to ="/signupage"> <span className="text-teal-500 font-semibold cursor-pointer"> Sign Up for Free</span></Link>
             </p>
           </div>
         </div>
