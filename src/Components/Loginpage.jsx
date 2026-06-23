@@ -9,12 +9,28 @@ function Loginpage() {
         <div>
           <img src={login} alt="" />
         </div>
-        <div className=" clas">
-          <div className="w-full lg:w-[50%] flex flex-col gap-3">
-            <button  className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
-              <input type="email" name="" id="" placeholder="Email Address" />
+        <div className="">
+         <div>
+            <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Email Address"
+                className="outline-none w-full px-2"
+              />
             </button>
-            <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full"><input type="password" name="" id="" placeholder="Password" /></button>
+          </div>
+          <div>
+            <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Password"
+                className="outline-none w-full px-2"
+              />
+            </button>
           </div>
           <div>
                       <button className="bg-teal-400 text-white font-bold rounded-xl py-3 mt-2 w-full text-lg text-center">
