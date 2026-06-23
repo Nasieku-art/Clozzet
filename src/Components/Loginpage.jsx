@@ -14,7 +14,7 @@ function Loginpage() {
         <div className="flex-1 flex flex-col gap-3">
            <div className="text-center flex-1">
           <h1 className="text-black font-bold text-4xl">
-           
+           Login to your Account
           </h1>
         </div>
           <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
@@ -37,10 +37,9 @@ function Loginpage() {
             Login to your Account
           </button>
 
-          <div className="flex items-center gap-3 mt-2">
-            <div className="flex-1 border-t border-gray-300"></div>
-            <span className="text-gray-400 text-sm">OR</span>
-            <div className="flex-1 border-t border-gray-300"></div>
+          <div className="flex gap-10">
+            <div><input type="checkbox" name="" id="" /><p>Remember Me</p></div>
+            <div>Forgot Password</div>
           </div>
 
           <div className="mt-2">
@@ -53,7 +52,7 @@ function Loginpage() {
           <div className="mt-2 mb-2 text-center">
             <p>
               Do you Have An Account?
-              <Link to ="/signupage"> <span className="text-teal-500 font-semibold cursor-pointer"> Sign Up for Free</span></Link>
+             <Link to="/signupage" className="text-teal-500 font-semibold cursor-pointer">Sign Up for Free</Link>
             </p>
           </div>
         </div>
