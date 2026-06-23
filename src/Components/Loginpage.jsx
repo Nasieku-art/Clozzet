@@ -6,18 +6,16 @@ function Loginpage() {
     <div className="container mx-auto py-6">
       <div className="flex gap-10 items-center min-h-[90vh]">
 
-        <div className="text-center flex-1">
+        <div className="hidden lg:block lg:w-[50%]">
+          <img src={login} alt="" className="w-full h-full object-cover rounded-2xl" />
+        </div>
+
+        <div className="flex-1 flex flex-col gap-3">
+           <div className="text-center flex-1">
           <h1 className="text-black font-bold text-4xl">
-            Login to your Account
+           
           </h1>
         </div>
-
-        <div className="flex-1">
-          <img src={login} alt="" className="w-full" />
-        </div>
-
-        {/* Right: Form */}
-        <div className="flex-1 flex flex-col gap-3">
           <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
             <input
               type="email"
