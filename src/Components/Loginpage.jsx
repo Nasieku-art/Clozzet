@@ -10,7 +10,7 @@ function Loginpage() {
           <img src={login} alt="" />
         </div>
         <div className="">
-         <div>
+         <div className="w-full lg:w-[50%] flex flex-col gap-3">
             <button className="border-gray-300 border rounded-xl py-2 mt-2 w-full">
               <input
                 type="email"
