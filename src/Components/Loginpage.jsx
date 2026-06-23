@@ -37,8 +37,8 @@ function Loginpage() {
             Login to your Account
           </button>
 
-          <div className="flex gap-10">
-            <div><input type="checkbox" name="" id="" /><p>Remember Me</p></div>
+          <div className="flex gap-25">
+            <div className="flex gap-2"><input type="checkbox" name="" id="" /><p>Remember Me</p></div>
             <div>Forgot Password</div>
           </div>
 
@@ -52,7 +52,7 @@ function Loginpage() {
           <div className="mt-2 mb-2 text-center">
             <p>
               Do you Have An Account?
-             <Link to="/signupage" className="text-teal-500 font-semibold cursor-pointer">Sign Up for Free</Link>
+           <span className="text-teal-500 font-semibold cursor-pointer">Sign Up for Free</span>
             </p>
           </div>
         </div>
