@@ -1,14 +1,15 @@
 import About from "../Components/About";
 import Whoweare from "../Components/Whoweare";
 import Cardy from "../Components/Cardy";
-function Aboutus(){
-    return(
-        <div>
-            <About/>
-            <Whoweare/>
-            <Cardy/>
-        </div>
-
-    )
+import History from "../Components/History";
+function Aboutus() {
+  return (
+    <div>
+      <About />
+      <Whoweare />
+      <Cardy />
+      <History />
+    </div>
+  );
 }
-export default Aboutus
+export default Aboutus;

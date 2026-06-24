@@ -11,6 +11,7 @@ import CartItem from "./CartItem";
 import SignuPage from "../Pages/SignuPage";
 import Login from "../Pages/Login";
 import Aboutus from "../Pages/Aboutus"
+import Singlepros from "../Pages/Singlepros";
 
 function Router() {
   const { cart, setCart } = useContext(StateContext);
@@ -84,6 +85,14 @@ function Router() {
           element={
             <Layout>
               <Aboutus />
+            </Layout>
+          }
+        />
+        <Route
+          path="singlepros"
+          element={
+            <Layout>
+              <Singlepros />
             </Layout>
           }
         />

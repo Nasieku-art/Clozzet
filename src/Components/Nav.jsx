@@ -19,7 +19,7 @@ function Nav({ cartCount }) {
             </Link>
             <ul className="hidden lg:flex gap-7 items-center">
               <Link to="/">Home</Link>
-              <li>About Us</li>
+              <Link to="/Aboutus"> <li>About Us </li></Link>
               <Link to="/shop"> shop</Link>
             </ul>
           </div>
